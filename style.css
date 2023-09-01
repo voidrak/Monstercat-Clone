@@ -1,0 +1,12 @@
+@font-face {
+  font-family: customFont;
+  src: url(font/MonumentExtended-Regular.otf);
+}
+
+:root {
+  --WHITE: #fdfdfd;
+  --BLUE-ACCENT: #1e90ff;
+  --BLACK-ACCENT: #383838;
+  --BLACK: #000000;
+  --FONT: customFont, "Helvetica", Arial, sans-serif;
+}
