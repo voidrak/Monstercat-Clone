@@ -2,11 +2,66 @@
   font-family: customFont;
   src: url(font/MonumentExtended-Regular.otf);
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
   --WHITE: #fdfdfd;
   --BLUE-ACCENT: #1e90ff;
   --BLACK-ACCENT: #383838;
   --BLACK: #000000;
   --FONT: customFont, "Helvetica", Arial, sans-serif;
+}
+.general-container {
+  position: relative;
+  /* height: 100%; */
+  background-image: url(img/album-1024.webp);
+  backdrop-filter: blur(8px);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+body {
+  background-color: black;
+}
+p {
+  color: white;
+}
+.test p {
+  color: goldenrod;
+}
+.top-section {
+}
+.header {
+  background: color-mix(in srgb, black, transparent 20%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  height: 65px;
+  width: 100vw;
+  z-index: 1;
+}
+.logo {
+  margin-left: 1rem;
+}
+.social-media {
+  display: flex;
+  column-gap: 25px;
+}
+.social-media i {
+  color: var(--WHITE);
+  font-size: 20px;
+}
+.hamburger-menu {
+  margin-right: 1rem;
+}
+.hamburger-menu i {
+  color: var(--WHITE);
+  font-size: 24px;
 }
