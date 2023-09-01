@@ -2,11 +2,7 @@
   font-family: customFont;
   src: url(font/MonumentExtended-Regular.otf);
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 :root {
   --WHITE: #fdfdfd;
   --BLUE-ACCENT: #1e90ff;
@@ -14,19 +10,24 @@
   --BLACK: #000000;
   --FONT: customFont, "Helvetica", Arial, sans-serif;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--FONT);
+}
 .general-container {
   position: relative;
-  /* height: 100%; */
   background-image: url(img/album-1024.webp);
-  backdrop-filter: blur(8px);
   background-position: top;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-repeat: repeat-x;
+  background-size: auto;
   z-index: -1;
 }
 
 body {
   background-color: black;
+  color: var(--WHITE);
 }
 p {
   color: white;
@@ -34,24 +35,22 @@ p {
 .test p {
   color: goldenrod;
 }
-.top-section {
-}
+
 .header {
-  background: color-mix(in srgb, black, transparent 20%);
+  background: color-mix(in srgb, black, transparent 10%);
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: sticky;
   top: 0;
-  height: 65px;
+  height: 60px;
   width: 100vw;
-  z-index: 1;
 }
 .logo {
   margin-left: 1rem;
 }
 .social-media {
-  display: flex;
+  display: none;
   column-gap: 25px;
 }
 .social-media i {
@@ -64,4 +63,28 @@ p {
 .hamburger-menu i {
   color: var(--WHITE);
   font-size: 24px;
+}
+.top-section {
+  backdrop-filter: blur(6px) brightness(50%);
+  display: flex;
+  flex-flow: column nowrap;
+  padding-top: 2rem;
+  width: 100%;
+}
+.top-section img {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  align-self: center;
+}
+.top-section h6 {
+  margin: 2rem;
+  font-weight: 100;
+}
+.track-details {
+  background-color: color-mix(in srgb, black, transparent 12%);
+}
+
+.test {
+  background-color: black;
 }

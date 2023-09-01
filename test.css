@@ -1,0 +1,26 @@
+body {
+  background-color: black;
+  background-image: url(img/album-1024.webp);
+}
+
+.container {
+  backdrop-filter: blur(6px);
+  height: 900px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: 80%;
+  width: 80%;
+  /* background-image: url(img/album-600.webp); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box h1 {
+  background-color: aqua;
+  color: aliceblue;
+}
