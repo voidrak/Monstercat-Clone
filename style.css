@@ -1,14 +1,11 @@
-@font-face {
-  font-family: customFont;
-  src: url(font/MonumentExtended-Regular.otf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 :root {
   --WHITE: #fdfdfd;
   --BLUE-ACCENT: #1e90ff;
   --BLACK-ACCENT: #383838;
   --BLACK: #000000;
-  --FONT: customFont, "Helvetica", Arial, sans-serif;
+  --FONT: "Montserrat", sans-serif;
 }
 * {
   margin: 0;
@@ -18,8 +15,9 @@
 }
 .general-container {
   position: relative;
-  background-image: url(img/album-1024.webp);
-  background-position: top;
+  background-image: url(img/background.jpg);
+  background-blend-mode: darken;
+  background-position: top center;
   background-repeat: repeat-x;
   background-size: auto;
   z-index: -1;
@@ -33,6 +31,7 @@ p {
   color: white;
 }
 .test p {
+  background-color: black;
   color: goldenrod;
 }
 
@@ -45,6 +44,7 @@ p {
   top: 0;
   height: 60px;
   width: 100vw;
+  z-index: 1;
 }
 .logo {
   margin-left: 1rem;
@@ -65,10 +65,10 @@ p {
   font-size: 24px;
 }
 .top-section {
-  backdrop-filter: blur(6px) brightness(50%);
+  /* backdrop-filter: blur(9px) brightness(40%); */
   display: flex;
   flex-flow: column nowrap;
-  padding-top: 2rem;
+  padding-top: 3rem;
   width: 100%;
 }
 .top-section img {
@@ -77,14 +77,30 @@ p {
   height: auto;
   align-self: center;
 }
-.top-section h6 {
-  margin: 2rem;
-  font-weight: 100;
-}
 .track-details {
-  background-color: color-mix(in srgb, black, transparent 12%);
+  /* backdrop-filter: blur(10px) brightness(20%); */
+  padding: 1rem;
+}
+.track-details h5 {
+  padding: 2rem 0;
+  font-weight: 100;
+  font-style: italic;
+}
+.track-details h5 span {
+  color: #50a584;
+}
+.track-details h2,
+h3 {
+  margin: 0.5rem 0;
+}
+.listen-share {
+  display: flex;
 }
 
-.test {
-  background-color: black;
+/*///////// ///////// MEDIA QUERY//////////////////////// */
+
+@media screen and (min-width: 532px) {
+  .social-media {
+    display: flex;
+  }
 }
