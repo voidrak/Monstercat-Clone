@@ -13,6 +13,12 @@
   box-sizing: border-box;
   font-family: var(--FONT);
 }
+
+body {
+  background-color: black;
+  color: var(--WHITE);
+}
+
 .general-container {
   position: relative;
   background-image: url(img/background.jpg);
@@ -21,11 +27,6 @@
   background-repeat: repeat-x;
   background-size: auto;
   z-index: -1;
-}
-
-body {
-  background-color: black;
-  color: var(--WHITE);
 }
 p {
   color: white;
@@ -36,7 +37,8 @@ p {
 }
 
 .header {
-  background: color-mix(in srgb, black, transparent 10%);
+  /* background: color-mix(in srgb, black, transparent 15%); */
+  backdrop-filter: blur(6px) brightness(50%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -64,6 +66,85 @@ p {
   color: var(--WHITE);
   font-size: 24px;
 }
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Target the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: var(--BLACK); /* Set the background color of the track */
+}
+
+/* Target the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: var(--WHITE); /* Set the background color of the thumb */
+}
+
+aside {
+  display: none;
+  width: 100%;
+  max-width: 423px;
+  height: 100%;
+  background-color: var(--BLACK);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+aside .top-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 15px 20px 10px;
+}
+aside .top-head img {
+  width: 200px;
+  height: auto;
+}
+aside .top-head i {
+  font-size: 20px;
+}
+aside .aside-list {
+  max-height: 60%;
+  margin-left: 15px;
+  overflow: auto;
+}
+aside .aside-list ul {
+  list-style-type: none;
+}
+aside .aside-list ul li {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  padding: 10px 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+aside .aside-list ul li i {
+  font-size: 10px;
+}
+aside .aside-social {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  font-size: 20px;
+  padding: 1.5em 0 1.5em 0;
+}
+aside .sign-up {
+  display: flex;
+  column-gap: 10px;
+  margin-left: 15px;
+}
+aside .sign-up h3 {
+  font-weight: 400;
+}
+aside .sign-up h3:first-child {
+  border: 1px solid white;
+  padding: 1px 5px;
+}
+
 .top-section {
   /* backdrop-filter: blur(9px) brightness(40%); */
   display: flex;
@@ -95,9 +176,33 @@ h3 {
 }
 .listen-share {
   display: flex;
+  margin: 2rem 0;
+  width: 100%;
+  column-gap: 10px;
+}
+.listen-share button {
+  display: flex;
+  flex-wrap: nowrap;
+  column-gap: 10px;
+  font-size: 15px;
+  color: var(--WHITE);
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: auto;
+}
+.listen-share .listen {
+  background-color: #50a584;
+  border: 2px solid #50a584;
+  padding: 10px 20px 10px 20px;
+  width: 180px;
+}
+.listen-share .share {
+  background: transparent;
+  border: 1px solid white;
+  padding: 10px 30px 10px 30px;
 }
 
-/*///////// ///////// MEDIA QUERY//////////////////////// */
+/*-----------------------MEDIA QUERY------------------- */
 
 @media screen and (min-width: 532px) {
   .social-media {
