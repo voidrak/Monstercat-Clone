@@ -4,14 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeAsideBar = document.querySelector(".close-aside");
 
   hamburgerMenu.addEventListener("click", () => {
-    console.log("clicked");
-    asideBar.style.display = "block";
+    asideBar.classList.toggle("display-side-bar");
   });
 
   closeAsideBar.addEventListener("click", () => {
-    console.log("clicked");
-    asideBar.style.display = "none";
+    asideBar.classList.toggle("display-side-bar");
   });
-
-  //   hamburgerMenu.style.backgroundColor = "red";
 });
