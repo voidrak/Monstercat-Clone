@@ -119,6 +119,7 @@ aside .sign-up h3:first-child {
   position: relative;
   /* width: 95%; */
   align-self: center;
+  /* outline: 1px solid red; */
 }
 p {
   color: white;
@@ -161,13 +162,13 @@ p {
   font-size: 24px;
 }
 
-.top-section {
+.img-section {
   display: flex;
   flex-flow: column nowrap;
   padding-top: 3rem;
   width: 100%;
 }
-.top-section img {
+.img-section img {
   width: 100%;
   max-width: 500px;
   height: auto;
@@ -177,18 +178,25 @@ p {
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
+  word-spacing: 5px;
 }
-.track-details h5 {
-  padding: 1rem 0 5px 0;
-  font-weight: 100;
+.img-section h5 {
+  padding: 2rem 0 5px 0;
+  font-weight: 500;
   font-style: italic;
+  font-size: large;
 }
-.track-details h5 span {
+.img-section h5 span {
   color: #50a584;
 }
-.track-details h2,
+.track-details h1,
 h3 {
   margin: 0.5rem 0;
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+.track-details h3 {
+  margin-top: -3px;
 }
 .listen-share {
   display: flex;
@@ -237,5 +245,37 @@ h3 {
 @media screen and (min-width: 532px) {
   .social-media {
     display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .general-container {
+    width: 90%;
+  }
+  .img-section img {
+    max-width: 712px;
+  }
+
+  .img-section {
+    flex-flow: row;
+  }
+  .img-section h5 {
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    transform: rotate(180deg);
+    margin-bottom: -29px;
+    margin-right: 5px;
+  }
+  .img-section img {
+    order: 2;
+  }
+  .track-details h1,
+  h3 {
+    font-size: 2rem;
+  }
+  .track-details h1 {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
   }
 }
