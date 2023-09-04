@@ -117,7 +117,7 @@ aside .sign-up h3:first-child {
   display: flex;
   flex-direction: column;
   position: relative;
-  /* width: 95%; */
+  width: 95%;
   align-self: center;
   /* outline: 1px solid red; */
 }
@@ -161,18 +161,20 @@ p {
   color: var(--WHITE);
   font-size: 24px;
 }
-
+.top-section {
+  margin-top: 2rem;
+}
 .img-section {
   display: flex;
   flex-flow: column nowrap;
   padding-top: 3rem;
-  width: 100%;
+  /* width: 100%; */
 }
 .img-section img {
   width: 100%;
   max-width: 500px;
   height: auto;
-  /* align-self: center; */
+  align-self: center;
 }
 .track-details {
   display: flex;
@@ -240,7 +242,52 @@ h3 {
   z-index: 1;
 }
 
+.stream-board h1 {
+  font-size: 20px;
+  font-weight: 600;
+  word-spacing: 5px;
+}
+.player {
+  display: flex;
+  border: 1px solid white;
+  width: 340px;
+}
+.player i {
+  color: white;
+}
+.player div {
+  border: 1px solid white;
+}
+.player div:not(:first-child) {
+  padding: 5px 10px;
+}
+.player div:first-child {
+  padding: 5px 10px;
+}
+
+/* ----------------------------
+
+
+SOLVE THE MARGIN PROBLEM BY MAKE THE  MARGIN THE 
+GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
+
+
+
+---------------------------------------*/
+
 /*-----------------------MEDIA QUERY------------------- */
+
+@media screen and (max-width: 532px) {
+  .top-section {
+    margin-left: 1rem;
+  }
+  .img-section img {
+    width: 95%;
+    max-width: 500px;
+    height: auto;
+    /* align-self: center; */
+  }
+}
 
 @media screen and (min-width: 532px) {
   .social-media {
@@ -277,5 +324,20 @@ h3 {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .top-section {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    column-gap: 4rem;
+  }
+  .img-section img {
+    max-width: 408px;
+  }
+  .track-details h1 {
+    font-size: 2.5rem;
   }
 }
