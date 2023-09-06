@@ -24,9 +24,21 @@ body {
   color: var(--WHITE);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   background: var(--BLACK);
   width: 100%;
+}
+
+.background-image {
+  width: 102%;
+  height: 102%;
+  position: absolute;
+  top: -1%;
+  left: -1%;
+  background-position: center;
+  background-size: cover;
+  filter: blur(10px) brightness(50%);
+  /* z-index: -1; */
 }
 
 ::-webkit-scrollbar {
@@ -108,9 +120,6 @@ aside .sign-up h3:first-child {
   padding: 1px 5px;
 }
 
-.back-img {
-  width: 100vw;
-}
 .general-container {
   display: flex;
   flex-direction: column;
@@ -159,29 +168,36 @@ p {
   color: var(--WHITE);
   font-size: 24px;
 }
-.top-section {
-  margin-top: 2rem;
-  background-image: url(img/background.jpg);
-  background-blend-mode: darken;
-  background-position: top center;
-  background-repeat: repeat-x;
-  background-size: auto;
+.background-page {
+  width: 100%;
+  overflow: hidden;
+  background-image: url(img/album-1024.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.img-filter {
+  background-color: color-mix(in srgb, black, transparent 20%);
+  background-image: linear-gradient(to top, black 5%, transparent 15%);
+  backdrop-filter: blur(5px);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+.top-section {
+  width: 85%;
   align-self: center;
-  justify-self: center;
 }
 .img-section {
   display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  display: flex;
   flex-flow: column nowrap;
   padding-top: 3rem;
-  /* width: 100%; */
 }
 .img-section img {
   width: 100%;
   max-width: 500px;
   height: auto;
-  align-self: center;
 }
 .track-details {
   display: flex;
@@ -352,7 +368,6 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
   .top-section {
     display: flex;
     align-items: center;
-    justify-self: center;
     column-gap: 4rem;
   }
   .img-section img {
