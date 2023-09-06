@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
+@font-face {
+  font-family: myFont;
+  src: url(font/MonumentExtended-Regular.otf);
+}
 :root {
   --WHITE: #fdfdfd;
   --BLUE-ACCENT: #1e90ff;
   --BLACK-ACCENT: #383838;
   --BLACK: #000000;
   --FONT: "Montserrat", sans-serif;
+  --MYF-FONT: myFont;
 }
 * {
   margin: 0;
@@ -104,14 +109,7 @@ aside .sign-up h3:first-child {
 }
 
 .back-img {
-  width: 100%;
-  background-image: url(img/background.jpg);
-  background-blend-mode: darken;
-  background-position: top center;
-  background-repeat: repeat-x;
-  background-size: auto;
-  display: flex;
-  flex-direction: column;
+  width: 100vw;
 }
 .general-container {
   display: flex;
@@ -163,6 +161,15 @@ p {
 }
 .top-section {
   margin-top: 2rem;
+  background-image: url(img/background.jpg);
+  background-blend-mode: darken;
+  background-position: top center;
+  background-repeat: repeat-x;
+  background-size: auto;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
 }
 .img-section {
   display: flex;
@@ -241,28 +248,35 @@ h3 {
   align-items: center;
   z-index: 1;
 }
-
+.mid-section {
+  background-color: var(--BLACK);
+  width: 100%;
+}
 .stream-board h1 {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 400;
   word-spacing: 5px;
+  font-family: var(--MYF-FONT);
+  margin: 16.6px 0;
 }
 .player {
   display: flex;
-  border: 1px solid white;
-  width: 340px;
 }
 .player i {
   color: white;
+  /* font-size: 1.5em; */
 }
 .player div {
   border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .player div:not(:first-child) {
-  padding: 5px 10px;
+  padding: 5px 13px;
 }
 .player div:first-child {
-  padding: 5px 10px;
+  padding: 0.8rem 10px;
 }
 
 /* ----------------------------
@@ -278,9 +292,6 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
 /*-----------------------MEDIA QUERY------------------- */
 
 @media screen and (max-width: 532px) {
-  .top-section {
-    margin-left: 1rem;
-  }
   .img-section img {
     width: 95%;
     max-width: 500px;
@@ -290,14 +301,20 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
 }
 
 @media screen and (min-width: 532px) {
+  .general-container {
+    width: 85%;
+  }
   .social-media {
     display: flex;
+  }
+  .stream-board h1 {
+    font-size: 30px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .general-container {
-    width: 90%;
+    width: 80%;
   }
   .img-section img {
     max-width: 712px;
@@ -324,6 +341,10 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
+  }
+
+  .stream-board h1 {
+    font-size: 40px;
   }
 }
 
