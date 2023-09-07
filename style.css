@@ -377,6 +377,16 @@ p {
   font-family: var(--FONT);
   margin-bottom: 2rem;
 }
+.email-field {
+  border-bottom: 0.1px solid gray;
+  padding: 1rem 0;
+  margin-bottom: 3rem;
+}
+.email-field input {
+  background: transparent;
+  border: none;
+  outline: none;
+}
 
 /* ----------------------------
 
