@@ -8,7 +8,7 @@
   --WHITE: #fdfdfd;
   --BLUE-ACCENT: #1e90ff;
   --BLACK-ACCENT: #383838;
-  --BLACK: #000000;
+  --BLACK: #181716;
   --FONT: "Montserrat", sans-serif;
   --MYF-FONT: myFont;
 }
@@ -145,7 +145,6 @@ p {
   display: block;
 }
 .test p {
-  background-color: black;
   color: goldenrod;
 }
 
@@ -292,6 +291,48 @@ p {
 }
 .side-social i {
   font-size: 20px;
+}
+.track-container {
+  margin-top: 2rem;
+}
+.track-container h1 {
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+}
+.track-list {
+  list-style-type: none;
+  margin-top: 1rem;
+}
+.track-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.track-list li .track-left,
+.track-right {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.track-list li .track-left {
+  column-gap: 15px;
+}
+.track-left i {
+  font-size: 35px;
+}
+.track-list li .track-right {
+  column-gap: 2vw;
+}
+.two-digits {
+  margin-left: -9px;
+}
+.track-list li .track-left .track-name h3 {
+  font-size: 14px;
+}
+.track-list li .track-left .track-name h5 {
+  font-size: 12px;
+  font-weight: 100;
 }
 
 /* ----------------------------
