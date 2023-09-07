@@ -134,7 +134,7 @@ aside .sign-up h3:first-child {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 95%;
+  width: 90%;
   align-self: center;
   /* outline: 1px solid red; */
 }
@@ -191,13 +191,11 @@ p {
 .img-section {
   display: flex;
   flex-direction: column;
-  display: flex;
   flex-flow: column nowrap;
   padding-top: 3rem;
 }
 .img-section img {
   width: 100%;
-  align-self: center;
   max-width: 500px;
   height: auto;
 }
@@ -319,7 +317,7 @@ p {
   column-gap: 15px;
 }
 .track-left i {
-  font-size: 35px;
+  font-size: 30px;
 }
 .track-list li .track-right {
   column-gap: 2vw;
@@ -335,6 +333,51 @@ p {
   font-weight: 100;
 }
 
+.youtube-vid h2 {
+  margin: 2rem 0 1rem 0;
+}
+.youtube-vid iframe {
+  margin-top: 2rem;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.footer {
+  margin-top: 9rem;
+  margin-bottom: 2rem;
+}
+.upper-footer {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  list-style-type: none;
+}
+.upper-footer ul {
+  list-style-type: none;
+}
+.upper-footer ul li {
+  font-size: 14px;
+  font-weight: 100;
+  margin-bottom: 7px;
+}
+.upper-footer .about {
+  margin-top: 3rem;
+}
+.upper-footer .terms {
+  margin-bottom: 3rem;
+}
+.upper-footer .news {
+  margin-bottom: 2rem;
+}
+.upper-footer .news h2 {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 1rem;
+}
+.upper-footer .news p {
+  font-family: var(--FONT);
+  margin-bottom: 2rem;
+}
+
 /* ----------------------------
 
 
@@ -347,9 +390,8 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
 
 /*-----------------------MEDIA QUERY------------------- */
 
-@media screen and (max-width: 532px) {
+@media screen and (min-width: 360px) {
   .img-section img {
-    width: 95%;
     max-width: 500px;
     height: auto;
   }
@@ -368,6 +410,16 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
   .stream-board h1 {
     font-size: 30px;
   }
+  .track-container h1 {
+    font-size: 30px;
+    letter-spacing: 4px;
+  }
+  .track-list li .track-left {
+    column-gap: 20px;
+  }
+  .track-list li .track-right {
+    column-gap: 25px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -378,7 +430,7 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
 
 @media screen and (min-width: 768px) {
   .general-container {
-    width: 768px;
+    width: 736px;
     /* margin-left: 4.5vw; */
   }
   .img-section img {
@@ -419,11 +471,14 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
   .player div:first-child {
     padding: 1.5rem 20px;
   }
+  .track-container h1 {
+    font-size: 40px;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .general-container {
-    width: 992px;
+    width: 960px;
   }
   .top-section {
     display: flex;
@@ -444,6 +499,7 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
 @media screen and (min-width: 1185px) {
   .header {
     background: transparent;
+    backdrop-filter: blur(0);
     margin-top: 1rem;
   }
   .header .social-media {
@@ -459,7 +515,7 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
 
 @media screen and (min-width: 1440px) {
   .general-container {
-    width: 1200px;
+    width: 1168px;
   }
 
   .img-section img {
@@ -472,5 +528,8 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
   .track-details h3 {
     font-size: 36px;
     letter-spacing: 5px;
+  }
+  .track-container h1 {
+    font-size: 50px;
   }
 }
