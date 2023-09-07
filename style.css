@@ -16,7 +16,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--FONT);
+  font-family: var(--MYF-FONT);
+  font-weight: 400;
   /* outline: 1px solid red; */
 }
 
@@ -210,7 +211,7 @@ p {
 }
 .img-section h5 {
   padding: 2rem 0 5px 0;
-  font-weight: 500;
+  font-weight: 00;
   font-style: italic;
   font-size: 16px;
 }
@@ -235,22 +236,18 @@ p {
   display: flex;
   flex-wrap: nowrap;
   column-gap: 10px;
-  font-size: 15px;
+  font-size: 14px;
   color: var(--WHITE);
-  flex-shrink: 0;
-  flex-grow: 0;
-  width: auto;
+  padding: 20px 28.8px;
+  font-family: var(--FONT);
 }
 .listen-share .listen {
   background-color: #50a584;
   border: 2px solid #50a584;
-  padding: 10px 20px 10px 20px;
-  width: 180px;
 }
 .listen-share .share {
   background: transparent;
   border: 1px solid white;
-  padding: 10px 30px 10px 30px;
 }
 
 .mid-section {
@@ -332,6 +329,12 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
   }
 }
 
+@media screen and (max-width: 768px) {
+  .track-details {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .general-container {
     width: 768px;
@@ -365,15 +368,21 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
   }
 
   .stream-board h1 {
-    font-size: 40px;
+    font-size: 38px;
+  }
+
+  .player div:not(:first-child) {
+    padding: 23px 25px;
+    font-size: 20px;
+  }
+  .player div:first-child {
+    padding: 1.5rem 20px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .general-container {
     width: 992px;
-
-    /* margin-left: 4.5vw; */
   }
   .top-section {
     display: flex;
@@ -385,26 +394,42 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
   .img-section img {
     max-width: 408px;
   }
-  .track-details {
-    /* margin-right: -20rem; */
-    /* width: 50%; */
-  }
+
   .track-details h1 {
     font-size: 2.5rem;
   }
 }
 
 @media screen and (min-width: 1185px) {
+  .header {
+    background: transparent;
+    margin-top: 1rem;
+  }
   .header .social-media {
     display: none;
   }
   .side-social {
     display: flex;
   }
+  .top-section {
+    justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .general-container {
     width: 1200px;
+  }
+
+  .img-section img {
+    max-width: 480px;
+  }
+  .track-details h1 {
+    font-size: 50px;
+    /* font-family: var(--MYF-FONT); */
+  }
+  .track-details h3 {
+    font-size: 36px;
+    letter-spacing: 5px;
   }
 }
