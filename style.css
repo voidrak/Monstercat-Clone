@@ -140,14 +140,17 @@ aside .sign-up h3:first-child {
 p {
   color: white;
 }
+.test {
+  display: block;
+}
 .test p {
   background-color: black;
   color: goldenrod;
 }
 
 .header {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  backdrop-filter: blur(10px);
+  background-color: color-mix(in srgb, black, transparent 20%);
+  backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
@@ -203,7 +206,7 @@ p {
   flex-direction: column;
   padding: 1rem 0;
   word-spacing: 5px;
-  width: 75%;
+  width: 50%;
 }
 .img-section h5 {
   padding: 2rem 0 5px 0;
@@ -252,7 +255,7 @@ p {
 
 .mid-section {
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 .stream-board h1 {
   font-size: 22px;
@@ -282,12 +285,12 @@ p {
 }
 
 .side-social {
-  display: flex;
+  display: none;
   flex-direction: column;
   row-gap: 1.5rem;
   position: fixed;
   top: 120px;
-  right: 24px;
+  right: 40px;
   z-index: 1;
 }
 .side-social i {
@@ -311,19 +314,15 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
     width: 95%;
     max-width: 500px;
     height: auto;
-    /* align-self: center; */
   }
 }
 
 @media screen and (min-width: 532px) {
-  /* .top-section {
-    width: 85%;
-  } */
   .img-section img {
     align-self: flex-start;
   }
   .general-container {
-    width: 85%;
+    width: 512px;
   }
   .social-media {
     display: flex;
@@ -334,13 +333,9 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
 }
 
 @media screen and (min-width: 768px) {
-  /* .top-section {
-    width: 90%;
-    margin-left: 4.5vw;
-  } */
   .general-container {
-    width: 90%;
-    margin-left: 4.5vw;
+    width: 768px;
+    /* margin-left: 4.5vw; */
   }
   .img-section img {
     max-width: 712px;
@@ -375,6 +370,11 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
 }
 
 @media screen and (min-width: 992px) {
+  .general-container {
+    width: 992px;
+
+    /* margin-left: 4.5vw; */
+  }
   .top-section {
     display: flex;
     align-items: center;
@@ -397,5 +397,14 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
 @media screen and (min-width: 1185px) {
   .header .social-media {
     display: none;
+  }
+  .side-social {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .general-container {
+    width: 1200px;
   }
 }
