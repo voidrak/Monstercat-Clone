@@ -318,7 +318,8 @@ p {
 .track-list li .track-left {
   column-gap: 15px;
 }
-.track-left i {
+.track-left i,
+.track-left audio i {
   font-size: 30px;
 }
 .track-list li .track-right {
@@ -398,6 +399,32 @@ p {
 }
 .email-field i {
   margin-right: 1.4rem;
+}
+.lower-footer .right-social .social {
+  margin: 1.5rem 0;
+}
+.lower-footer p {
+  font-family: var(--FONT);
+}
+.lower-footer .right-social p {
+  font-weight: 100;
+  font-size: 15px;
+}
+.lower-footer .right-social i {
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 4px;
+}
+
+.lower-footer .acknowledge {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.lower-footer .acknowledge p {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 /* ----------------------------
@@ -508,6 +535,16 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
 
   .upper-footer .news h2 {
     font-size: 20px;
+  }
+  .right-social {
+    display: flex;
+    justify-content: space-between;
+  }
+  .lower-footer .right-social .social {
+    margin: 0;
+  }
+  .lower-footer .right-social i {
+    margin-bottom: 13px;
   }
 }
 
