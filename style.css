@@ -27,6 +27,8 @@ body {
   flex-direction: column;
   /* align-items: center; */
   background: var(--BLACK);
+  background-image: url(img/background-tile.webp);
+  /* background-size: cover; */
   width: 100%;
 }
 
@@ -343,13 +345,14 @@ p {
 }
 
 .footer {
-  margin-top: 9rem;
+  margin-top: 7rem;
   margin-bottom: 2rem;
 }
 .upper-footer {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
   list-style-type: none;
+  padding-top: 3rem;
 }
 .upper-footer ul {
   list-style-type: none;
@@ -357,10 +360,7 @@ p {
 .upper-footer ul li {
   font-size: 14px;
   font-weight: 100;
-  margin-bottom: 7px;
-}
-.upper-footer .about {
-  margin-top: 3rem;
+  margin-bottom: 10px;
 }
 .upper-footer .terms {
   margin-bottom: 3rem;
@@ -376,16 +376,28 @@ p {
 .upper-footer .news p {
   font-family: var(--FONT);
   margin-bottom: 2rem;
+  font-weight: 100;
+  color: rgb(213, 207, 207);
 }
 .email-field {
-  border-bottom: 0.1px solid gray;
+  border-bottom: 0.5px solid gray;
   padding: 1rem 0;
   margin-bottom: 3rem;
+  display: flex;
+  /* justify-content: space-between; */
 }
 .email-field input {
   background: transparent;
   border: none;
   outline: none;
+  width: 100%;
+}
+.email-field input::placeholder {
+  font-size: 1rem;
+  font-weight: 100;
+}
+.email-field i {
+  margin-right: 1.4rem;
 }
 
 /* ----------------------------
@@ -484,6 +496,19 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
   .track-container h1 {
     font-size: 40px;
   }
+
+  .upper-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 236px);
+  }
+  .upper-footer ul li {
+    font-size: 19px;
+    margin-bottom: 12px;
+  }
+
+  .upper-footer .news h2 {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -503,6 +528,15 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
 
   .track-details h1 {
     font-size: 2.5rem;
+  }
+  .upper-footer {
+    grid-template-columns: repeat(3, 310.66px);
+  }
+  .upper-footer .terms {
+    margin-bottom: 0;
+  }
+  .upper-footer .news {
+    margin-bottom: 0;
   }
 }
 
@@ -541,5 +575,8 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
   }
   .track-container h1 {
     font-size: 50px;
+  }
+  .upper-footer {
+    grid-template-columns: repeat(3, 377.34px);
   }
 }
