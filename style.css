@@ -287,7 +287,7 @@ p {
   row-gap: 1.5rem;
   position: fixed;
   top: 120px;
-  right: 35px;
+  right: 28px;
   z-index: 1;
 }
 .side-social i {
@@ -616,5 +616,10 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
   }
   .upper-footer {
     grid-template-columns: repeat(3, 377.34px);
+  }
+}
+@media screen and (min-width: 1500px) {
+  .side-social {
+    right: 28px;
   }
 }
