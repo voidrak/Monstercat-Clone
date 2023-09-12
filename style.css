@@ -251,7 +251,7 @@ p {
 
 .mid-section {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 .stream-board h1 {
   font-size: 22px;
@@ -556,7 +556,7 @@ GENERAL CONTAINER NOT FOR INDIVIDUAL SECTIONS
     display: flex;
     align-items: center;
     column-gap: 3rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
     /* width: 75%; */
   }
   .img-section img {
